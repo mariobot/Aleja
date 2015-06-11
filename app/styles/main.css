@@ -24,18 +24,51 @@
 body
 {
     font-family: 'Gidole';
-
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 a,
 a:hover
 {
+    margin: 10px;
+
     cursor: pointer;
     text-decoration: none;
-    color: black;
-    margin:10px;
 
+    color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: 'JennaSue';
+}
+h1
+{
+    font-size: 7em;
+}
+h2
+{
+    font-size: 6em;
+}
+h3
+{
+    font-size: 5em;
+}
+h4
+{
+    font-size: 4em;
+}
+h5
+{
+    font-size: 2em;
+}
+label
+{
+    font-family: 'Gidole';
+    font-weight: normal;
+    font-style: normal;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -45,7 +78,51 @@ a:hover
     padding-right: 15px;
     padding-left: 15px;
 }
+.subtitle span
+{
+    font-size: 20px;
+}
+.navbar
+{
+    z-index: 999;
 
+    margin: 0;
+    padding: 0;
+
+    background-color: none;
+}
+.navbar-default
+{
+    border-color: transparent;
+    background-color: transparent;
+}
+.contact
+{
+    display: block;
+
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    text-align: center;
+}
+.sectioncontact
+{
+    border-top: .5px solid black;
+    border-bottom: .5px solid black;
+}
+.send
+{
+    width: 100%;
+
+    background-color: black;
+}
+.btn-primary:hover
+{
+    color: black;
+    background-color: white;
+}
 /* Custom page header */
 .header
 {
@@ -101,6 +178,13 @@ a:hover
 {
     margin-top: 28px;
 }
+.left,
+.right,
+.left:hover,
+.right:hover,
+{
+    margin: 0 !important;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px)
@@ -140,15 +224,18 @@ a:hover
     left: 50%;
 
     width: 500px;
-    height: 200px;
+    height: .25;
     margin: -120px 0 0 -240px;
 
+    -webkit-animation: logo 1.5s ; /* Chrome, Safari, Opera */
+            animation: logo 1.5s;
     text-align: center;
 }
 .options
 {
-    margin-top: 20px;
-    font-size: 20px;
+    font-size: 25px;
+
+    margin-top: 25px;
 }
 .subtitle
 {
@@ -160,4 +247,142 @@ a:hover
 {
     font-family: 'JennaSue';
     font-size: 10em;
+}
+#alenavtitle
+{
+    font-family: 'JennaSue';
+    font-size: 3em;
+
+    margin: 5px 0 0 10px;
+}
+
+/*logo animation */
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes logo
+{
+    0%
+    {
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: .25;
+    }
+    50%
+    {
+        opacity: .50;
+    }
+    75%
+    {
+        opacity: .75;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+/* Standard syntax */
+@keyframes logo
+{
+    0%
+    {
+        opacity: 0;
+    }
+    25%
+    {
+        opacity: .25;
+    }
+    50%
+    {
+        opacity: .50;
+    }
+    75%
+    {
+        opacity: .75;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.carousel
+{
+    margin: 0;
+    margin-top: -100px;
+    padding: 0;
+}
+.carousel-inner > .item > img
+{
+    width: 100%;
+    height: 680px;
+}
+
+/*Social Butttons */
+
+.social
+{
+    font-size: 2.5em;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 300px;
+    padding-top: 60px;
+
+    text-align: center;
+
+    color: white;
+    background-color: black;
+}
+.social a
+{
+    text-decoration: none;
+
+    color: inherit;
+}
+.social i
+{
+    margin: .3em;
+
+    cursor: pointer;
+    transition: color 300ms ease, margin-top 300ms ease;
+    transform: translateZ(0);
+}
+.social i:hover
+{
+    margin-top: -1px;
+}
+.social i#twitter:hover
+{
+    color: #77ddf6;
+}
+.social i#github:hover
+{
+    color: black;
+}
+.social i#linkedin:hover
+{
+    color: #0177b5;
+}
+.social i#code:hover
+{
+    color: #29a329;
+}
+.social i#stack:hover
+{
+    color: #ed780e;
+}
+.social i#plus:hover
+{
+    color: #d43402;
+}
+.social i#mail:hover
+{
+    color: #f7b401;
+}
+.jumbotron
+{
+    margin: 0;
 }
